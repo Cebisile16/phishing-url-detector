@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing URL Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <h1> Phishing URL Detector</h1>
+
+    <p class="description">
+        Enter a URL below to check for common signs of a phishing website.
+    </p>
+
+    <div class="checker">
+
+        <input
+            type="text"
+            id="urlInput"
+            placeholder="https://example.com"
+        >
+
+        <button id="checkButton">
+            Check URL
+        </button>
+
+    </div>
+
+    <div id="result" class="result hidden">
+
+        <h2 id="riskLevel"></h2>
+
+        <p id="riskMessage"></p>
+
+        <h3>Security Checks</h3>
+
+        <ul id="checks"></ul>
+
+    </div>
+
+    <div class="info">
+
+        <h2> What is Phishing?</h2>
+
+        <p>
+            Phishing is a cyberattack where attackers try to trick
+            people into revealing sensitive information such as
+            passwords, banking details or personal information.
+        </p>
+
+        <h3>Things to look for:</h3>
+
+        <ul>
+            <li>Suspicious or unfamiliar domains</li>
+            <li>URLs using HTTP instead of HTTPS</li>
+            <li>IP addresses instead of domain names</li>
+            <li>Suspicious words such as "login" or "verify"</li>
+            <li>Unusually long URLs</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
