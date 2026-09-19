@@ -46,7 +46,6 @@ The project will be developed using:
 * CSS
 * JavaScript
 
-No external frameworks or backend services are required.
 
 ## How It Works
 
@@ -72,13 +71,7 @@ could be flagged because:
 
 The application would warn the user that the URL should be treated with caution.
 
-## Important Note
 
-This project is an educational tool and does **not** guarantee that a URL is safe or malicious.
-
-A legitimate website can contain characteristics that appear suspicious, and a phishing website can be designed to look legitimate.
-
-The purpose of the detector is to identify **warning signs**, not to provide a definitive security verdict.
 
 ## Future Improvements
 
@@ -92,6 +85,3 @@ Possible future improvements include:
 * Creating browser-extension functionality
 * Adding automated URL scanning
 
-## Author
-
-Ceby
