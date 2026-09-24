@@ -1,14 +1,17 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from detector import uses_ip_address
+
+from detector import uses_ip_address, uses_http, contains_suspicious_words
 
 app = Flask(__name__)
+
 CORS(app)
 
 
 @app.route("/")
 def home():
- return "Phishing URL Detector backend is running!"
+    return "Phishing URL Detector backend is running!"
+
 
 @app.route("/check")
 def check_url():
@@ -17,12 +20,17 @@ def check_url():
     if not url:
         return jsonify({"error": "URL is required"}), 400
 
-    suspicious = uses_ip_address(url)
+    suspicious = (
+        uses_ip_address(url)
+        or uses_http(url)
+        or contains_suspicious_words(url)
+    )
 
     return jsonify({
         "url": url,
         "suspicious": suspicious
     })
+
 
 if __name__ == "__main__":
     app.run(debug=True)

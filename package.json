@@ -1,0 +1,24 @@
+{
+  "name": "phishing-url-detector",
+  "version": "1.0.0",
+  "description": "Phishing is a type of cyberattack where attackers try to trick people into providing sensitive information such as passwords, banking details, or personal information.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cebisile16/phishing-url-detector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Cebisile16/phishing-url-detector/issues"
+  },
+  "homepage": "https://github.com/Cebisile16/phishing-url-detector#readme",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}

@@ -26,19 +26,19 @@ checkButton.addEventListener("click", async () => {
     if (data.suspicious) {
       riskLevel.textContent = "Potentially Suspicious";
       riskMessage.textContent =
-        "This URL shows a characteristic that may indicate phishing.";
+        "This URL shows one or more characteristics that may indicate phishing.";
 
       checks.innerHTML = `
-                <li>URL uses an IP address instead of a domain name.</li>
-            `;
+        <li>One or more suspicious URL characteristics were detected.</li>
+      `;
     } else {
-      riskLevel.textContent = "No Suspicious IP Address Detected";
+      riskLevel.textContent = "No Suspicious Signs Detected";
       riskMessage.textContent =
-        "This URL does not use an IP address as its hostname.";
+        "This URL did not trigger any of the checks in this detector.";
 
       checks.innerHTML = `
-                <li>URL uses a domain name instead of an IP address.</li>
-            `;
+        <li>No suspicious characteristics were detected.</li>
+      `;
     }
   } catch (error) {
     result.classList.remove("hidden");
