@@ -18,9 +18,9 @@ The purpose of this project is to help users understand some of the warning sign
 
 The application checks a URL for several basic suspicious characteristics:
 
-* Whether the URL uses HTTP instead of HTTPS
-* Whether an IP address is used instead of a domain name
-* Suspicious words such as `login`, `verify`, `account`, `secure`, or `update`
+- Whether the URL uses HTTP instead of HTTPS
+- Whether an IP address is used instead of a domain name
+- Suspicious words such as `login`, `verify`, `account`, `secure`, or `update`
 
 The application then provides a result indicating whether the URL triggered any of the checks.
 
@@ -30,27 +30,27 @@ The detector does not confirm that a URL is definitely safe or malicious. It ide
 
 This project demonstrates an understanding of:
 
-* Phishing attacks
-* Social engineering
-* URL analysis
-* HTTPS and secure communication
-* Suspicious URLs
-* Basic threat detection
-* Cybersecurity awareness
+- Phishing attacks
+- Social engineering
+- URL analysis
+- HTTPS and secure communication
+- Suspicious URLs
+- Basic threat detection
+- Cybersecurity awareness
 
 ## Technologies
 
 The project was developed using:
 
-* HTML
-* CSS
-* JavaScript
-* Python
-* Flask
-* Flask-CORS
-* Gunicorn
-* Git and GitHub
-* Render
+- HTML
+- CSS
+- JavaScript
+- Python
+- Flask
+- Flask-CORS
+- Gunicorn
+- Git and GitHub
+- Render
 
 ## How It Works
 
@@ -87,9 +87,9 @@ http://192.168.1.20/login/verify-account
 
 could be flagged because:
 
-* It uses HTTP instead of HTTPS.
-* It uses an IP address instead of a domain name.
-* It contains suspicious words such as `login` and `verify`.
+- It uses HTTP instead of HTTPS.
+- It uses an IP address instead of a domain name.
+- It contains suspicious words such as `login` and `verify`.
 
 The application would warn the user that the URL contains characteristics that should be treated with caution.
 
@@ -97,10 +97,12 @@ The application would warn the user that the URL contains characteristics that s
 
 Possible future improvements include:
 
-* Checking URLs against known phishing databases
-* Adding domain reputation checks
-* Adding WHOIS information
-* Using threat intelligence APIs
-* Improving the risk-scoring system
-* Creating browser-extension functionality
-* Adding automated URL scanning
+- Checking URLs against known phishing databases
+- Adding domain reputation checks
+- Adding WHOIS information
+- Using threat intelligence APIs
+- Improving the risk-scoring system
+- Creating browser-extension functionality
+- Adding automated URL scanning
+
+Verification code: WTC-43ACV624
