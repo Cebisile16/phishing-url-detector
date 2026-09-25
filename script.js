@@ -15,7 +15,7 @@ checkButton.addEventListener("click", async () => {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:5000/check?url=${encodeURIComponent(url)}`,
+      `https://phishing-url-detector-9yvx.onrender.com/check?url=${encodeURIComponent(url)}`,
     );
 
     const data = await response.json();
