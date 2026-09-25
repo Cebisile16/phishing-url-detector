@@ -1,5 +1,11 @@
 # phishing-url-detector
 
+## Live Application
+
+**Live Website:** https://phishing-url-detector-web.onrender.com
+
+**Backend API:** https://phishing-url-detector-9yvx.onrender.com
+
 ## Overview
 
 Phishing is a type of cyberattack where attackers try to trick people into providing sensitive information such as passwords, banking details, or personal information.
@@ -10,21 +16,15 @@ The purpose of this project is to help users understand some of the warning sign
 
 ## Features
 
-The application will analyse a URL for suspicious characteristics such as:
+The application checks a URL for several basic suspicious characteristics:
 
-* Whether the URL uses HTTPS
+* Whether the URL uses HTTP instead of HTTPS
 * Whether an IP address is used instead of a domain name
-* Suspicious words such as `login`, `verify`, or `account`
-* Unusually long URLs
-* Excessive subdomains
-* Suspicious characters in the URL
-* Other basic phishing indicators
+* Suspicious words such as `login`, `verify`, `account`, `secure`, or `update`
 
-The application will then provide a result indicating whether the URL appears:
+The application then provides a result indicating whether the URL triggered any of the checks.
 
-* Safe
-* Suspicious
-* High Risk
+The detector does not confirm that a URL is definitely safe or malicious. It identifies basic characteristics that may require further investigation.
 
 ## Cybersecurity Concepts
 
@@ -34,26 +34,48 @@ This project demonstrates an understanding of:
 * Social engineering
 * URL analysis
 * HTTPS and secure communication
-* Suspicious domains
+* Suspicious URLs
 * Basic threat detection
 * Cybersecurity awareness
 
 ## Technologies
 
-The project will be developed using:
+The project was developed using:
 
 * HTML
 * CSS
 * JavaScript
-
+* Python
+* Flask
+* Flask-CORS
+* Gunicorn
+* Git and GitHub
+* Render
 
 ## How It Works
 
-1. The user enters a URL.
-2. The application analyses the URL.
-3. Different characteristics of the URL are checked.
-4. Each suspicious characteristic contributes to the risk assessment.
-5. The application displays the result and explains why the URL was flagged.
+1. The user enters a URL into the website.
+2. JavaScript sends the URL to the Flask backend.
+3. The Flask backend passes the URL to the detection functions.
+4. The detector checks for an IP address, HTTP, and suspicious words.
+5. The backend returns the result as JSON.
+6. JavaScript displays the result to the user.
+
+## Project Structure
+
+```text
+phishing-url-detector/
+│
+├── backend/
+│   ├── app.py
+│   └── detector.py
+│
+├── index.html
+├── style.css
+├── script.js
+├── requirements.txt
+└── README.md
+```
 
 ## Example
 
@@ -69,9 +91,7 @@ could be flagged because:
 * It uses an IP address instead of a domain name.
 * It contains suspicious words such as `login` and `verify`.
 
-The application would warn the user that the URL should be treated with caution.
-
-
+The application would warn the user that the URL contains characteristics that should be treated with caution.
 
 ## Future Improvements
 
@@ -84,4 +104,3 @@ Possible future improvements include:
 * Improving the risk-scoring system
 * Creating browser-extension functionality
 * Adding automated URL scanning
-
